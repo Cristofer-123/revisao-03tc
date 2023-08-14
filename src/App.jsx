@@ -3,6 +3,15 @@ import './App.css'
 
 function App() {
 
+  const [usuario, setUsuario] = useState("")
+//      variavel  funcao(setUsuario() ) //
+
+function handleUsuario(evento) {
+  setUsuario(evento.target.value)
+
+}
+
+console.log(usuario)
   return (
     <>
       <header>
@@ -13,7 +22,7 @@ function App() {
     <form action="">
       <div>
         <label htmlFor="usuario">Usuario</label>
-      <input type="text" id='usuario' placeholder='Digite seu usuario' />
+      <input type="text" id='usuario' placeholder='Digite seu usuario' onChange={handleUsuario} />
       </div>
       <div>
         <label htmlFor="senha">Senha</label>
